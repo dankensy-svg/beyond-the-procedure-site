@@ -183,6 +183,7 @@ footer a:hover{color:var(--cream)}
         <li><a href="#about">The Show</a></li>
         <li><a href="#lineup">Lineup</a></li>
         <li><a href="#host">Host</a></li>
+        <li><a href="https://www.youtube.com/@TravelierIR" target="_blank" rel="noopener">YouTube</a></li>
         <li><a href="mailto:dan@travelierir.com?subject=Beyond%20the%20Procedure%20episode%20alerts" class="btn btn-ghost" style="padding:.5rem 1rem">Get alerts</a></li>
       </ul>
     </nav>
@@ -202,7 +203,7 @@ footer a:hover{color:var(--cream)}
             <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4 2.5v11l9-5.5z"/></svg>
             Episode 1
           </a>
-          <a class="btn btn-ghost" href="#about">About the show</a>
+          <a class="btn btn-ghost" href="https://www.youtube.com/@TravelierIR" target="_blank" rel="noopener">Subscribe on YouTube</a>
         </div>
       </div>
     </div>
@@ -225,7 +226,7 @@ footer a:hover{color:var(--cream)}
           <li><span>04</span>The first on-air introduction of Travelier</li>
         </ul>
         <div id="ep-media" class="ep-media" hidden></div>
-        <div id="ep-actions" class="ep-actions"><a class="btn btn-primary" href="mailto:dan@travelierir.com?subject=Notify%20me%20when%20Episode%201%20is%20live">Notify me when it's live</a></div>
+        <div id="ep-actions" class="ep-actions"><a class="btn btn-primary" href="mailto:dan@travelierir.com?subject=Notify%20me%20when%20Episode%201%20is%20live">Notify me when it's live</a><a class="btn btn-ghost" href="https://www.youtube.com/@TravelierIR" target="_blank" rel="noopener">Subscribe on YouTube</a></div>
       </div>
     </div>
   </section>
@@ -328,7 +329,7 @@ footer a:hover{color:var(--cream)}
 <footer>
   <div class="wrap">
     <span>&copy; 2026 Travelier IR Services. TravelierIR: Beyond the Procedure.</span>
-    <span><a href="https://travelierir.com" target="_blank" rel="noopener">travelierir.com</a> &middot; <a href="mailto:dan@travelierir.com">dan@travelierir.com</a></span>
+    <span><a href="https://travelierir.com" target="_blank" rel="noopener">travelierir.com</a> &middot; <a href="https://www.youtube.com/@TravelierIR" target="_blank" rel="noopener">YouTube</a> &middot; <a href="mailto:dan@travelierir.com">dan@travelierir.com</a></span>
   </div>
 </footer>
 
@@ -381,7 +382,7 @@ if('IntersectionObserver' in window){
     const L=isLive?links(f):[];
     $('ep-actions').innerHTML=isLive
       ?(L.map((x,i)=>'<a class="btn '+(i?'btn-ghost':'btn-primary')+'" href="'+esc(x[0])+'" target="_blank" rel="noopener">Listen on '+esc(x[1])+'</a>').join(''))
-      :'<a class="btn btn-primary" href="mailto:dan@travelierir.com?subject='+encodeURIComponent('Notify me when Episode '+f.number+' is live')+'">Notify me when it\'s live</a>';
+      :'<a class="btn btn-primary" href="mailto:dan@travelierir.com?subject='+encodeURIComponent('Notify me when Episode '+f.number+' is live')+'">Notify me when it\'s live</a><a class="btn btn-ghost" href="https://www.youtube.com/@TravelierIR" target="_blank" rel="noopener">Subscribe on YouTube</a>';
     $('ep-cards').innerHTML=eps.map((e,i)=>{
       const lv=e.status==='live';const ls=lv?links(e):[];
       const st=lv?'<span class="status live">Listen now</span>':'<span class="status">'+(i===0||e===f?'Premiering soon':'Coming up')+'</span>';
