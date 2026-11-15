@@ -1,0 +1,61 @@
+{
+  "_how_to_use": "Edit this file to add or update episodes. Set \"status\" to \"live\" and paste at least one link when an episode is released. The newest live episode is featured at the top of the page automatically. See HOW-TO-ADD-EPISODES.md.",
+  "episodes": [
+    {
+      "number": 1,
+      "status": "soon",
+      "release_date": "",
+      "title": "IR Partnerships",
+      "subtitle": "A New Model for I.R. in Rural Communities",
+      "guest": "Kavi Devulapalli, MD",
+      "angle": "The patient and the case for local IR",
+      "description": "The show's front door: what interventional radiology is, why rural access matters and why Travelier exists.",
+      "topics": [
+        "Kavi's path into interventional radiology",
+        "What IR is, explained through a patient's eyes",
+        "Why access to IR matters in rural communities",
+        "The first on-air introduction of Travelier"
+      ],
+      "cover": "assets/episode-1-cover.jpg",
+      "embed_url": "",
+      "audio_url": "",
+      "spotify_url": "",
+      "apple_url": "",
+      "youtube_url": ""
+    },
+    {
+      "number": 2,
+      "status": "soon",
+      "release_date": "",
+      "title": "",
+      "subtitle": "",
+      "guest": "Dana Dunleavy",
+      "angle": "The hospital team's perspective",
+      "description": "What a partnership looks like for the people inside the hospital: staff, referring physicians and leadership.",
+      "topics": [],
+      "cover": "",
+      "embed_url": "",
+      "audio_url": "",
+      "spotify_url": "",
+      "apple_url": "",
+      "youtube_url": ""
+    },
+    {
+      "number": 3,
+      "status": "soon",
+      "release_date": "",
+      "title": "",
+      "subtitle": "",
+      "guest": "Ian Wilson, MD",
+      "angle": "The long view and accountability",
+      "description": "What a lasting program means for a community, and how a partnership stays accountable over time.",
+      "topics": [],
+      "cover": "",
+      "embed_url": "",
+      "audio_url": "",
+      "spotify_url": "",
+      "apple_url": "",
+      "youtube_url": ""
+    }
+  ]
+}
