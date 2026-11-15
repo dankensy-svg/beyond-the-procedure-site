@@ -50,7 +50,7 @@ a{color:inherit}
 .nav.scrolled{background:rgba(3,22,42,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-color:var(--line)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:1rem}
 .brand{font-family:var(--display);font-weight:600;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;font-size:1.05rem;line-height:1;white-space:nowrap}
-.brand span{color:var(--copper)}
+.brand span{color:var(--copper)}.brand .long{color:inherit}
 .nav ul{display:flex;gap:clamp(1rem,2.5vw,2rem);list-style:none;margin:0;padding:0;font-size:var(--text-sm)}
 .nav ul a{text-decoration:none;color:var(--muted);transition:color .2s}
 .nav ul a:hover{color:var(--cream)}
@@ -166,7 +166,7 @@ footer a:hover{color:var(--cream)}
 
 <header class="nav" id="nav">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="TravelierIR: Beyond the Procedure, home">TravelierIR <span>/</span> Beyond<span class="long" style="color:inherit"> the Procedure</span></a>
+    <a class="brand" href="#top" aria-label="TravelierIR: Beyond the Procedure, home">TravelierIR<span class="long"> <span>/</span> <span style="color:inherit">Beyond the Procedure</span></span></a>
     <nav aria-label="Primary">
       <ul>
         <li><a href="#episode-1">Episode 1</a></li>
