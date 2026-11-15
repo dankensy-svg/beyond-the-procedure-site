@@ -52,8 +52,9 @@ a{color:inherit}
 .brand{font-family:var(--display);font-weight:600;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;font-size:1.05rem;line-height:1;white-space:nowrap}
 .brand span{color:var(--copper)}.brand .long{color:inherit}
 .nav ul{display:flex;align-items:center;gap:clamp(1rem,2.5vw,2rem);list-style:none;margin:0;padding:0;font-size:var(--text-sm)}
-.nav ul a{display:inline-flex;align-items:center;line-height:1;text-decoration:none;color:var(--muted);transition:color .2s}
+.nav ul a{white-space:nowrap;display:inline-flex;align-items:center;line-height:1;text-decoration:none;color:var(--muted);transition:color .2s}
 .nav ul a:hover{color:var(--cream)}
+@media (max-width:1080px){.nav ul li.opt{display:none}}
 @media (max-width:720px){.nav ul li:not(:last-child){display:none}.brand{font-size:.9rem;letter-spacing:.04em}}
 @media (max-width:400px){.brand .long{display:none}}
 
@@ -149,6 +150,15 @@ p{margin:0 0 1rem}
 .mission{font-size:clamp(1.25rem,1.05rem + .8vw,1.75rem);line-height:1.4;color:var(--cream);max-width:36ch;margin:0 auto 2rem;font-weight:500}
 .presented .actions{display:flex;justify-content:center;flex-wrap:wrap;gap:.75rem}
 
+.clip-grid{display:grid;grid-template-columns:1fr;gap:1.25rem;margin-top:2rem}@media (min-width:600px){.clip-grid{grid-template-columns:repeat(2,1fr)}}@media (min-width:1000px){.clip-grid{grid-template-columns:repeat(5,1fr);gap:1rem}.clip-title{font-size:1.15rem}}
+.clip-play{position:relative;display:block;width:100%;aspect-ratio:16/9;padding:0;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--navy-800);cursor:pointer}
+.clip-play img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s ease}
+.clip-play:hover img{transform:scale(1.03)}
+.clip-icon{position:absolute;left:50%;top:50%;width:54px;height:54px;margin:-27px 0 0 -27px;border-radius:50%;background:var(--copper);color:var(--navy-950);display:flex;align-items:center;justify-content:center}
+.clip-icon svg{width:20px;height:20px;margin-left:3px}
+.clip-play iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.clip-num{font-size:var(--text-xs);letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:.9rem 0 .2rem}
+.clip-title{font-family:var(--display);font-weight:600;font-size:1.35rem;line-height:1.1;text-transform:uppercase;color:var(--cream);margin:0}
 footer{border-top:1px solid var(--line);padding:2rem 0 2.5rem;font-size:var(--text-xs);color:var(--muted)}
 footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 footer a{color:var(--pale);text-decoration:none}
@@ -180,9 +190,10 @@ footer a:hover{color:var(--cream)}
     <nav aria-label="Primary">
       <ul>
         <li><a href="#episode-1">Episode 1</a></li>
+        <li><a href="#clips">Clips</a></li>
         <li><a href="#about">The Show</a></li>
-        <li><a href="#lineup">Lineup</a></li>
-        <li><a href="#host">Host</a></li>
+        <li class="opt"><a href="#lineup">Lineup</a></li>
+        <li class="opt"><a href="#host">Host</a></li>
         <li><a href="https://www.youtube.com/@TravelierIR" target="_blank" rel="noopener">YouTube</a></li>
         <li><a href="mailto:dan@travelierir.com?subject=Beyond%20the%20Procedure%20episode%20alerts" class="btn btn-ghost" style="padding:.5rem 1rem">Get alerts</a></li>
       </ul>
@@ -227,6 +238,25 @@ footer a:hover{color:var(--cream)}
         </ul>
         <div id="ep-media" class="ep-media" hidden></div>
         <div id="ep-actions" class="ep-actions"><a class="btn btn-primary" href="mailto:dan@travelierir.com?subject=Notify%20me%20when%20Episode%201%20is%20live">Notify me when it's live</a><a class="btn btn-ghost" href="https://www.youtube.com/@TravelierIR" target="_blank" rel="noopener">Subscribe on YouTube</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="clips" id="clips" aria-labelledby="clips-title">
+    <div class="wrap">
+      <div class="lineup-head reveal">
+        <div>
+          <p class="eyebrow">Watch now</p>
+          <h2 id="clips-title" style="margin:0">Clips from Episode 1</h2>
+        </div>
+        <p class="muted">Short takes from the conversation with Kavi Devulapalli, MD. <a href="https://www.youtube.com/@TravelierIR" target="_blank" rel="noopener" style="color:var(--copper)">More on YouTube</a></p>
+      </div>
+      <div class="clip-grid">
+        <article class="clip reveal"><button class="clip-play" type="button" data-yt="jvuj6J9G-0E" aria-label="Play clip: The real cost of missing IR"><img src="https://i.ytimg.com/vi/jvuj6J9G-0E/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="clip-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M4 2.5v11l9-5.5z"/></svg></span></button><p class="clip-num">Clip 1</p><h3 class="clip-title">The real cost of missing IR</h3></article>
+        <article class="clip reveal"><button class="clip-play" type="button" data-yt="OZAb-TdXFPU" aria-label="Play clip: The challenge of IR recruiting"><img src="https://i.ytimg.com/vi/OZAb-TdXFPU/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="clip-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M4 2.5v11l9-5.5z"/></svg></span></button><p class="clip-num">Clip 2</p><h3 class="clip-title">The challenge of IR recruiting</h3></article>
+        <article class="clip reveal"><button class="clip-play" type="button" data-yt="so2Rrd5NOV4" aria-label="Play clip: The question admins should ask"><img src="https://i.ytimg.com/vi/so2Rrd5NOV4/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="clip-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M4 2.5v11l9-5.5z"/></svg></span></button><p class="clip-num">Clip 3</p><h3 class="clip-title">The question admins should ask</h3></article>
+        <article class="clip reveal"><button class="clip-play" type="button" data-yt="WwmknjUpgJo" aria-label="Play clip: IR is capital, not a cost center"><img src="https://i.ytimg.com/vi/WwmknjUpgJo/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="clip-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M4 2.5v11l9-5.5z"/></svg></span></button><p class="clip-num">Clip 4</p><h3 class="clip-title">IR is capital, not a cost center</h3></article>
+        <article class="clip reveal"><button class="clip-play" type="button" data-yt="ksVTlrvMoK0" aria-label="Play clip: Locums vs. partnership"><img src="https://i.ytimg.com/vi/ksVTlrvMoK0/hqdefault.jpg" alt="" loading="lazy" width="480" height="360"><span class="clip-icon" aria-hidden="true"><svg viewBox="0 0 16 16" fill="currentColor"><path d="M4 2.5v11l9-5.5z"/></svg></span></button><p class="clip-num">Clip 5</p><h3 class="clip-title">Locums vs. partnership</h3></article>
       </div>
     </div>
   </section>
@@ -396,6 +426,7 @@ if('IntersectionObserver' in window){
   }
   fetch('episodes.json',{cache:'no-cache'}).then(r=>r.ok?r.json():null).then(d=>d&&render(d)).catch(()=>{});
 })();
+document.querySelectorAll('.clip-play').forEach(b=>b.addEventListener('click',()=>{if(b.querySelector('iframe'))return;const f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+b.dataset.yt+'?autoplay=1&rel=0';f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;f.title=b.getAttribute('aria-label');b.innerHTML='';b.appendChild(f)}));
 </script>
 </body>
 </html>
