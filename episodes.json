@@ -3,8 +3,8 @@
   "episodes": [
     {
       "number": 1,
-      "status": "soon",
-      "release_date": "",
+      "status": "live",
+      "release_date": "2026-11-17",
       "title": "IR Partnerships",
       "subtitle": "A New Model for I.R. in Rural Communities",
       "guest": "Kavi Devulapalli, MD",
@@ -21,7 +21,7 @@
       "audio_url": "",
       "spotify_url": "",
       "apple_url": "",
-      "youtube_url": ""
+      "youtube_url": "https://www.youtube.com/watch?v=JXIQjLW4rqA"
     },
     {
       "number": 2,
